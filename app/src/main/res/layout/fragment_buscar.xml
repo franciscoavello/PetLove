@@ -3,21 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="60dp"
     tools:context="layout.BuscarFragment">
-
 
     <RelativeLayout
         android:id="@+id/contenedorImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         android:elevation="5dp"
         android:background="@color/blanco">
 
         <com.github.siyamed.shapeimageview.RoundedImageView
             android:id="@+id/imagenMascota"
             android:layout_width="wrap_content"
-            android:layout_height="380dp"
+            android:layout_height="390dp"
             android:layout_margin="5dp"
             android:src="@drawable/perro_jugando"
             android:scaleType="centerCrop"
@@ -28,7 +30,7 @@
             android:id="@+id/imagenLayout"
             android:layout_width="match_parent"
             android:background="@drawable/gradiente"
-            android:layout_height="380dp"
+            android:layout_height="390dp"
             android:layout_margin="5dp">
 
             <TextView
@@ -65,38 +67,28 @@
 
     </RelativeLayout>
 
+
     <RelativeLayout
         android:id="@+id/botonesBuscar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/contenedorImagen"
-        android:layout_marginTop="20dp">
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal|bottom"
+        android:elevation="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal">
-
-            <ImageButton
-                android:id="@+id/boton_like"
+            <com.like.LikeButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/boton_like"
-                android:src="@drawable/ic_action_name"
-                android:elevation="5dp"
-                android:clickable="true"
-                android:padding="10dp"
-                android:scaleType="fitXY"
-                android:rotation="15"
-                android:layout_gravity="center"/>
+                app:like_drawable="@drawable/heart_on"
+                app:unlike_drawable="@drawable/ic_action_name"
+                app:circle_start_color="@color/colorPrimary"
+                app:circle_end_color="@color/colorAccent"
+                app:icon_size="70dp"
+                android:id="@+id/botonLike"/>
 
-        </LinearLayout>
 
     </RelativeLayout>
-
-
-
 
 
 

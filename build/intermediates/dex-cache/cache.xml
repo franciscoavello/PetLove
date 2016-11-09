@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="4136f126f559aafa409f44d13aadb7c3e6d2599b">
+        sha1="b3ec48a93d9de26310ee83f1142aa7179d2fb629">
         <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5047e54e92583ef307bdf95060d0fb511eecb786\classes.dex" />
     </item>
     <item
@@ -84,12 +84,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jar="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\exploded-aar\com.github.jd-alexander\LikeButton\0.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_3f678919429c1114dbcc32668d530f6f62b250ea\classes.dex" />
+        sha1="042cf6b3b9ef0ea3baacd9b27e4901680769cbc8">
+        <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.jd-alexander-LikeButton-0.2.0_84fbf6f014fe03d0ba9f1c1ce0587c7377574ac9\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -99,6 +99,15 @@
         revision="24.0.3"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
         <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_b950c1020aaf90d2e8246060b6313b32e128db1c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_3f678919429c1114dbcc32668d530f6f62b250ea\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -120,15 +129,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_99dcd9a1a4a794896aa370df99c085ddda5606e3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -138,11 +138,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_99dcd9a1a4a794896aa370df99c085ddda5606e3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="3fb9b40f7a221db914f0dc8ad9d691f620f45eac">
+        sha1="4d5a6b40b218780591edfa8ea212d2b839b63f8f">
         <dex dex="C:\Users\Francisco Avello\Desktop\android-design-library-master\PetLovePrueba\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0dd01da456d128d14b7b392900a3e5317ba46099\classes.dex" />
     </item>
     <item
