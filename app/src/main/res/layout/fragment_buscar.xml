@@ -35,7 +35,7 @@
                 android:id="@+id/descripcionMascota"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Santiago | 2 años"
+                android:text="Santiago"
                 android:textColor="#AAAAAA"
                 android:textSize="15dp"
                 android:layout_alignParentBottom="true"
@@ -43,6 +43,7 @@
                 android:layout_marginBottom="20dp"/>
 
             <TextView
+                android:id="@+id/nombreMascotaBuscar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bobby"
