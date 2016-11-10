@@ -3,12 +3,14 @@ package layout;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +20,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -62,6 +65,21 @@ public class BuscarFragment extends Fragment {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
+
+
+        Display display = getActivity().getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+
+        com.github.siyamed.shapeimageview.RoundedImageView imagenBuscar = (com.github.siyamed.shapeimageview.RoundedImageView) view.findViewById(R.id.imagenMascota);
+        RelativeLayout imagenLayout = (RelativeLayout) view.findViewById(R.id.imagenLayout);
+        android.view.ViewGroup.LayoutParams layoutParams = imagenBuscar.getLayoutParams();
+        layoutParams.height = (int) height * 6/10;
+        android.view.ViewGroup.LayoutParams imagenLayoutParams = imagenLayout.getLayoutParams();
+        imagenLayoutParams.height = (int) height * 6/10;
+
 
 
         final ImageButton likeButon = (ImageButton) view.findViewById(R.id.likeMascotaBoton);
