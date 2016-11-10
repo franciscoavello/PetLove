@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="loading_images">
+        <item>@drawable/perro01</item>
+        <item>@drawable/perro_jugando</item>
+        <item>@drawable/gato</item>
+        <item>@drawable/perro02</item>
+    </array>
+</resources>

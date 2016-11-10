@@ -2,6 +2,7 @@ package layout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -94,7 +95,9 @@ public class BuscarFragment extends Fragment {
                         }
                         @Override
                         public void onAnimationEnd(Animation animation) {
-                            imagenMasco.setImageResource(R.drawable.perro02);
+                            TypedArray images = getResources().obtainTypedArray(R.array.loading_images);
+                            int choice = (int) (Math.random() * images.length());
+                            imagenMasco.setImageResource(images.getResourceId(choice, R.drawable.perro01));
                         }
                         @Override
                         public void onAnimationRepeat(Animation animation) {
