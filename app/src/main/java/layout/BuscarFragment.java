@@ -18,6 +18,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -59,8 +60,8 @@ public class BuscarFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
 
-        /*
-        final Button likeButon = (Button) view.findViewById(R.id.boton_like);
+
+        final ImageButton likeButon = (ImageButton) view.findViewById(R.id.likeMascotaBoton);
 
         likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
 
@@ -68,32 +69,46 @@ public class BuscarFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent e) {
 
                 android.view.ViewGroup.LayoutParams layoutParams = likeButon.getLayoutParams();
-
-
-                //Code to convert height and width in dp.
                 int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
                 int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
+/*
 
                 if(e.getAction() == MotionEvent.ACTION_DOWN){
                     layoutParams.width = width - 20;
                     layoutParams.height = height - 20;
                     likeButon.setLayoutParams(layoutParams);
-                }
+                }*/
                 if(e.getAction() == MotionEvent.ACTION_UP){
                     layoutParams.width = width;
                     layoutParams.height = height;
                     likeButon.setLayoutParams(layoutParams);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setMessage("Le has dado like a esta mascota, te notificaremos cuando el dueño acepte")
-                            .setTitle("Compatible");
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
+
+                    final ImageView imagenMasco = (ImageView) view.findViewById(R.id.imagenMascota);
+
+                    Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
+                    imagenMasco.startAnimation(fadeOut);
+
+                    fadeOut.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+                        }
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            imagenMasco.setImageResource(R.drawable.perro02);
+                        }
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+                        }
+                    });
+
                 }
 
                 return false;
             }
         });
-        */
+
+
+
 
         return view;
     }

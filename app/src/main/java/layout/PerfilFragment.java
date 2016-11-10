@@ -14,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -44,7 +45,7 @@ public class PerfilFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.fragment_perfil,null,false);
 
-        Button agregarMascotaBoton = (Button) view.findViewById(R.id.agregarMascotaBoton);
+        ImageButton agregarMascotaBoton = (ImageButton) view.findViewById(R.id.agregarMascotaBoton);
         agregarMascotaBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

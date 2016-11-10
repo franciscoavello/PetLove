@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/ic_huella" />
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval" >
+            <gradient android:type="radial" android:gradientRadius="100dp"
+                android:startColor="@color/colorPrimaryDark" android:endColor="@color/blanco" />
+        </shape>
+    </item>
+
+</layer-list>
