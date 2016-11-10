@@ -3,7 +3,9 @@ package layout;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -67,6 +69,7 @@ public class BuscarFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
 
 
+
         Display display = getActivity().getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -74,6 +77,8 @@ public class BuscarFragment extends Fragment {
         int height = size.y;
 
         com.github.siyamed.shapeimageview.RoundedImageView imagenBuscar = (com.github.siyamed.shapeimageview.RoundedImageView) view.findViewById(R.id.imagenMascota);
+        imagenBuscar.setTag(R.drawable.perro_jugando);
+        imagenBuscar.setImageResource(R.drawable.perro_jugando);
         RelativeLayout imagenLayout = (RelativeLayout) view.findViewById(R.id.imagenLayout);
         android.view.ViewGroup.LayoutParams layoutParams = imagenBuscar.getLayoutParams();
         layoutParams.height = (int) height * 6/10;
@@ -124,6 +129,7 @@ public class BuscarFragment extends Fragment {
                             String[] lugares = getResources().getStringArray(R.array.lugares);
                             int random = (int) (Math.random() * images.length());
                             imagenMasco.setImageResource(images.getResourceId(random, R.drawable.perro01));
+                            imagenMasco.setTag(images.getResourceId(random, R.drawable.perro01));
                             nombreMasco.setText(nombres[random]);
                             lugarMasco.setText(lugares[random]);
                         }
@@ -181,6 +187,7 @@ public class BuscarFragment extends Fragment {
                             String[] lugares = getResources().getStringArray(R.array.lugares);
                             int random = (int) (Math.random() * images.length());
                             imagenMasco.setImageResource(images.getResourceId(random, R.drawable.perro01));
+                            imagenMasco.setTag(images.getResourceId(random, R.drawable.perro01));
                             nombreMasco.setText(nombres[random]);
                             lugarMasco.setText(lugares[random]);
                         }
@@ -201,7 +208,11 @@ public class BuscarFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), InformacionMascotaActivity.class);
                 TextView nombreMascotaIntent = (TextView) view.findViewById(R.id.nombreMascotaBuscar);
+                TextView ubicacionMascotaIntent = (TextView) view.findViewById(R.id.descripcionMascota);
+                com.github.siyamed.shapeimageview.RoundedImageView imagenMascotaIntent = (com.github.siyamed.shapeimageview.RoundedImageView) view.findViewById(R.id.imagenMascota);
                 intent.putExtra("nombreMascota",nombreMascotaIntent.getText().toString());
+                intent.putExtra("imagenMascota",(Integer) imagenMascotaIntent.getTag());
+                intent.putExtra("ubicacionMascota", ubicacionMascotaIntent.getText());
                 startActivity(intent);
             }
         });

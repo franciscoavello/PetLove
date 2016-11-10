@@ -78,7 +78,7 @@
         android:id="@+id/form_nombreNuevaMascota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:padding="16dp"
         android:inputType="text"
         android:hint="¿Cuál es el nombre de tu mascota?"
@@ -89,7 +89,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="16dp"
         android:text="Edad:"
         android:textSize="15dp"
@@ -98,7 +98,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <EditText
@@ -129,38 +129,24 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="16dp"
-        android:text="¿Que máscota es?"
+        android:text="Descripción"
         android:textSize="15dp"
         android:textColor="@color/primaryText"/>
 
-    <RadioGroup
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
+        android:minHeight="100dp"
         android:padding="16dp"
+        android:hint="Describe a tu mascota"
+        android:textSize="15dp"
         android:background="@color/blanco"
         android:orientation="horizontal">
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="35dp"
-            android:layout_weight="0.5"
-            android:text="Perro"
-            android:textColor="@color/secondaryText"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
-
-            android:layout_weight="0.5"
-            android:text="Gato"
-            android:textColor="@color/secondaryText"/>
-
-    </RadioGroup>
+    </EditText>
 
 </LinearLayout>
 

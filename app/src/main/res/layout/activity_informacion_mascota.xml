@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_informacion_mascota"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:orientation="vertical"
     tools:context="com.usach.uxyappsmoviles.petloveprueba.InformacionMascotaActivity">
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/imagenMascotaInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:elevation="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación: "
+            android:textSize="15dp"
+            android:textColor="@color/primaryText"/>
+
+        <TextView
+            android:id="@+id/ubicacionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/primaryText"/>
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+        <TextView
+            android:padding="16dp"
+            android:id="@+id/descripcionMascotaInfo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:textSize="15dp"
+            android:textColor="@color/secondaryText"/>
+
+    <View style="@style/Divider"/>
+
+</LinearLayout>
