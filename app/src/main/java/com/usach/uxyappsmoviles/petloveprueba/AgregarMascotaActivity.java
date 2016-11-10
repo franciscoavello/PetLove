@@ -1,10 +1,18 @@
 package com.usach.uxyappsmoviles.petloveprueba;
 
 import android.content.DialogInterface;
+import android.content.res.Configuration;
+import android.graphics.Point;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
 
 public class AgregarMascotaActivity extends AppCompatActivity {
 
@@ -15,6 +23,16 @@ public class AgregarMascotaActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Agregar mascota");
         actionBar.setDisplayHomeAsUpEnabled(true);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+
+        FrameLayout layoutFotos = (FrameLayout) findViewById(R.id.frameLayoutFotosMascota);
+        android.view.ViewGroup.LayoutParams layoutParams = layoutFotos.getLayoutParams();
+        layoutParams.width = width;
+        layoutParams.height = (int) width * 7/10;
     }
 
 
