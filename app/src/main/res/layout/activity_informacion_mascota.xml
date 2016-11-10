@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_informacion_mascota"
     android:layout_width="match_parent"
@@ -8,14 +8,32 @@
     android:orientation="vertical"
     tools:context="com.usach.uxyappsmoviles.petloveprueba.InformacionMascotaActivity">
 
-    <ImageView
-        android:id="@+id/imagenMascotaInfo"
+    <ImageSwitcher
+        android:id="@+id/imageSwitcherInfo"
         android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <ImageButton
+        android:id="@+id/botonAtras"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:elevation="5dp"/>
+        android:layout_alignLeft="@id/imageSwitcherInfo"
+        android:layout_alignBottom="@id/imageSwitcherInfo"
+        android:src="@drawable/ic_atras"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/botonAdelante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/imageSwitcherInfo"
+        android:layout_alignBottom="@id/imageSwitcherInfo"
+        android:src="@drawable/ic_adelante"
+        android:background="@android:color/transparent"/>
 
     <LinearLayout
+        android:id="@+id/infoImportante"
+        android:layout_below="@id/imageSwitcherInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -36,9 +54,12 @@
             android:textColor="@color/primaryText"/>
     </LinearLayout>
 
-    <View style="@style/Divider"/>
+    <View style="@style/Divider"
+        android:id="@+id/separador1"
+        android:layout_below="@id/infoImportante"/>
 
         <TextView
+            android:layout_below="@id/separador1"
             android:padding="16dp"
             android:id="@+id/descripcionMascotaInfo"
             android:layout_width="match_parent"
@@ -46,6 +67,7 @@
             android:textSize="15dp"
             android:textColor="@color/secondaryText"/>
 
-    <View style="@style/Divider"/>
+    <View style="@style/Divider"
+        android:layout_below="@id/descripcionMascotaInfo"/>
 
-</LinearLayout>
+</RelativeLayout>
