@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -86,11 +87,13 @@ public class BuscarFragment extends Fragment {
                     likeButon.setLayoutParams(layoutParams);
 
                     final ImageView imagenMasco = (ImageView) view.findViewById(R.id.imagenMascota);
+                    final RelativeLayout relavImagen = (RelativeLayout) view.findViewById(R.id.imagenLayout);
                     final TextView nombreMasco = (TextView) view.findViewById(R.id.nombreMascotaBuscar);
                     final TextView lugarMasco = (TextView) view.findViewById(R.id.descripcionMascota);
 
                     Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
                     imagenMasco.startAnimation(fadeOut);
+                    relavImagen.startAnimation(fadeOut);
 
                     fadeOut.setAnimationListener(new Animation.AnimationListener() {
                         @Override
