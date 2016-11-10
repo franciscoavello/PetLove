@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="loading_images">
+    <array name="imagenesPrueba">
         <item>@drawable/perro01</item>
         <item>@drawable/perro_jugando</item>
-        <item>@drawable/gato</item>
+        <item>@drawable/perro03</item>
         <item>@drawable/perro02</item>
+        <item>@drawable/perro04</item>
+        <item>@drawable/perro05</item>
+        <item>@drawable/perro06</item>
+    </array>
+    <array name="nombresAnimales">
+        <item>@drawable/perro01</item>
+        <item>@drawable/perro_jugando</item>
+        <item>@drawable/perro03</item>
+        <item>@drawable/perro02</item>
+        <item>@drawable/perro04</item>
+        <item>@drawable/perro05</item>
+        <item>@drawable/perro06</item>
     </array>
 </resources>

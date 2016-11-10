@@ -95,7 +95,7 @@ public class BuscarFragment extends Fragment {
                         }
                         @Override
                         public void onAnimationEnd(Animation animation) {
-                            TypedArray images = getResources().obtainTypedArray(R.array.loading_images);
+                            TypedArray images = getResources().obtainTypedArray(R.array.imagenesPrueba);
                             int choice = (int) (Math.random() * images.length());
                             imagenMasco.setImageResource(images.getResourceId(choice, R.drawable.perro01));
                         }
