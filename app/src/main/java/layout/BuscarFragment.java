@@ -69,21 +69,9 @@ public class BuscarFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
 
 
-
-        Display display = getActivity().getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        int height = size.y;
-
         com.github.siyamed.shapeimageview.RoundedImageView imagenBuscar = (com.github.siyamed.shapeimageview.RoundedImageView) view.findViewById(R.id.imagenMascota);
         imagenBuscar.setTag(R.drawable.perro_jugando);
         imagenBuscar.setImageResource(R.drawable.perro_jugando);
-        RelativeLayout imagenLayout = (RelativeLayout) view.findViewById(R.id.imagenLayout);
-        android.view.ViewGroup.LayoutParams layoutParams = imagenBuscar.getLayoutParams();
-        layoutParams.height = (int) height * 6/10;
-        android.view.ViewGroup.LayoutParams imagenLayoutParams = imagenLayout.getLayoutParams();
-        imagenLayoutParams.height = (int) height * 6/10;
 
 
 

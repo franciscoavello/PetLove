@@ -33,12 +33,7 @@ public class InformacionMascotaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_informacion_mascota);
         String nombreMascota = getIntent().getStringExtra("nombreMascota");
         String ubicacionMascota = getIntent().getStringExtra("ubicacionMascota");
-
         image_link = getIntent().getIntExtra("imagenMascota", 0);
-        /*
-        ImageView imagenMascotaIntent = (ImageView) findViewById(R.id.imagenMascotaInfo);
-
-        imagenMascotaIntent.setImageResource(image_link);*/
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(nombreMascota);
         actionBar.setDisplayHomeAsUpEnabled(true);
