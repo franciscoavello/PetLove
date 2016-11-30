@@ -82,20 +82,7 @@ public class BuscarFragment extends Fragment {
             @Override
             public boolean onTouch(View v, MotionEvent e) {
 
-                android.view.ViewGroup.LayoutParams layoutParams = likeButon.getLayoutParams();
-                int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
-                int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
-/*
-
-                if(e.getAction() == MotionEvent.ACTION_DOWN){
-                    layoutParams.width = width - 20;
-                    layoutParams.height = height - 20;
-                    likeButon.setLayoutParams(layoutParams);
-                }*/
                 if(e.getAction() == MotionEvent.ACTION_UP){
-                    layoutParams.width = width;
-                    layoutParams.height = height;
-                    likeButon.setLayoutParams(layoutParams);
 
                     final ImageView imagenMasco = (ImageView) view.findViewById(R.id.imagenMascota);
                     final RelativeLayout relavImagen = (RelativeLayout) view.findViewById(R.id.imagenLayout);
@@ -120,6 +107,9 @@ public class BuscarFragment extends Fragment {
                             imagenMasco.setTag(images.getResourceId(random, R.drawable.perro01));
                             nombreMasco.setText(nombres[random]);
                             lugarMasco.setText(lugares[random]);
+                            Animation fadeIn = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in);
+                            imagenMasco.startAnimation(fadeIn);
+                            relavImagen.startAnimation(fadeIn);
                         }
                         @Override
                         public void onAnimationRepeat(Animation animation) {
@@ -140,20 +130,7 @@ public class BuscarFragment extends Fragment {
             @Override
             public boolean onTouch(View v, MotionEvent e) {
 
-                android.view.ViewGroup.LayoutParams layoutParams = siguienteBoton.getLayoutParams();
-                int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
-                int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80, getResources().getDisplayMetrics());
-/*
-
-                if(e.getAction() == MotionEvent.ACTION_DOWN){
-                    layoutParams.width = width - 20;
-                    layoutParams.height = height - 20;
-                    likeButon.setLayoutParams(layoutParams);
-                }*/
                 if(e.getAction() == MotionEvent.ACTION_UP){
-                    layoutParams.width = width;
-                    layoutParams.height = height;
-                    siguienteBoton.setLayoutParams(layoutParams);
 
                     final ImageView imagenMasco = (ImageView) view.findViewById(R.id.imagenMascota);
                     final RelativeLayout relavImagen = (RelativeLayout) view.findViewById(R.id.imagenLayout);
@@ -178,6 +155,9 @@ public class BuscarFragment extends Fragment {
                             imagenMasco.setTag(images.getResourceId(random, R.drawable.perro01));
                             nombreMasco.setText(nombres[random]);
                             lugarMasco.setText(lugares[random]);
+                            Animation fadeIn = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in);
+                            imagenMasco.startAnimation(fadeIn);
+                            relavImagen.startAnimation(fadeIn);
                         }
                         @Override
                         public void onAnimationRepeat(Animation animation) {
@@ -190,7 +170,7 @@ public class BuscarFragment extends Fragment {
             }
         });
 
-        ImageButton infoMascotaBoton = (ImageButton) view.findViewById(R.id.iconoInformacion);
+        RelativeLayout infoMascotaBoton = (RelativeLayout) view.findViewById(R.id.contenedorImagen);
         infoMascotaBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

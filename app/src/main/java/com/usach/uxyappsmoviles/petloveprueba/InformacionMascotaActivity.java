@@ -6,6 +6,7 @@ import android.graphics.drawable.Animatable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
@@ -26,6 +27,8 @@ public class InformacionMascotaActivity extends AppCompatActivity {
     ImageSwitcher imageSwitcherFotos;
     int i=0;
     int image_link = 0;
+    int curIndex=0;
+    int downX,upX;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,29 +72,51 @@ public class InformacionMascotaActivity extends AppCompatActivity {
         imageSwitcherFotos.setInAnimation(in);
         imageSwitcherFotos.setOutAnimation(out);
 
-        ImageButton atrasBoton = (ImageButton) findViewById(R.id.botonAtras);
-        ImageButton adelanteBoton = (ImageButton) findViewById(R.id.botonAdelante);
-
-        atrasBoton.setOnClickListener(new View.OnClickListener() {
+        imageSwitcherFotos.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                if (i > 0) {
-                    i--;
-                    imageSwitcherFotos.setImageResource(imagenesPrueba[i]);
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    downX = (int) event.getX();
+                    Log.i("event.getX()", " downX " + downX);
+                    return true;
                 }
+
+                else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    upX = (int) event.getX();
+                    Log.i("event.getX()", " upX " + downX);
+                    if (upX - downX > 100) {
+
+                        //curIndex  current image index in array viewed by user
+                        curIndex--;
+                        if (curIndex < 0) {
+                            curIndex = imagenesPrueba.length-1;
+                        }
+
+                        imageSwitcherFotos.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_in_left));
+                        imageSwitcherFotos.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_out_right));
+
+                        imageSwitcherFotos.setImageResource(imagenesPrueba[curIndex]);
+                    }
+
+                    else if (downX - upX > -100) {
+
+                        curIndex++;
+                        if (curIndex > 4) {
+                            curIndex = 0;
+                        }
+
+                        imageSwitcherFotos.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_in_right));
+                        imageSwitcherFotos.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_out_left));
+
+                        imageSwitcherFotos.setImageResource(imagenesPrueba[curIndex]);
+                    }
+                    return true;
+                }
+                return false;
             }
         });
 
-        adelanteBoton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (i < imagenesPrueba.length - 1) {
-                    i++;
-                    imageSwitcherFotos.setImageResource(imagenesPrueba[i]);
-                }
-            }
-        });
     }
     @Override
     public boolean onSupportNavigateUp(){
