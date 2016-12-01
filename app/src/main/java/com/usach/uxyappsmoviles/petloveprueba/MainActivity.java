@@ -86,18 +86,5 @@ public class MainActivity extends AppCompatActivity {
             return 3;
         }
 
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "BUSCAR";
-                case 1:
-                    return "MATCHS";
-                case 2:
-                    return "PERFIL";
-            }
-            return null;
-        }
-
     }
 }

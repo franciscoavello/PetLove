@@ -47,6 +47,8 @@ public class InformacionMascotaActivity extends AppCompatActivity {
 
         String[] descripciones = getResources().getStringArray(R.array.descripcionesPerros);
 
+        TextView nombreMascotaInfo = (TextView) findViewById(R.id.nombreInfoMascota);
+        nombreMascotaInfo.setText(nombreMascota);
         TextView ubicacionMascotaInfo = (TextView) findViewById(R.id.ubicacionInfo);
         ubicacionMascotaInfo.setText(ubicacionMascota);
         TextView descripcionMascotaInfo = (TextView) findViewById(R.id.descripcionMascotaInfo);
@@ -62,76 +64,35 @@ public class InformacionMascotaActivity extends AppCompatActivity {
             carouselView.setImageListener(imageListener);
 
 
-        /*
-        imageSwitcherFotos = (ImageSwitcher) findViewById(R.id.imageSwitcherInfo);
-        imageSwitcherFotos.setFactory(new ViewSwitcher.ViewFactory() {
+        final ImageButton likeButon = (ImageButton) findViewById(R.id.infoLikeMascotaBoton);
+
+        likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
+
             @Override
-            public View makeView() {
-                ImageView imageView = new ImageView(getApplicationContext());
-                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                Display display = getWindowManager().getDefaultDisplay();
-                Point size = new Point();
-                display.getSize(size);
-                int width = size.x;
-                int height = size.y;
-                imageView.setLayoutParams(new ImageSwitcher.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) height * 4 / 10));
-                imageView.setImageResource(image_link);
-                return imageView;
-            }
-        });
+            public boolean onTouch(View v, MotionEvent e) {
 
-        Animation in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
-        Animation out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out);
-
-        imageSwitcherFotos.setInAnimation(in);
-        imageSwitcherFotos.setOutAnimation(out);
-
-        imageSwitcherFotos.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    downX = (int) event.getX();
-                    Log.i("event.getX()", " downX " + downX);
-                    return true;
+                if(e.getAction() == MotionEvent.ACTION_UP){
+                    finish();
                 }
 
-                else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    upX = (int) event.getX();
-                    Log.i("event.getX()", " upX " + downX);
-                    if (upX - downX > 100) {
-
-                        //curIndex  current image index in array viewed by user
-                        curIndex--;
-                        if (curIndex < 0) {
-                            curIndex = imagenesPrueba.length-1;
-                        }
-
-                        imageSwitcherFotos.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_in_left));
-                        imageSwitcherFotos.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_out_right));
-
-                        imageSwitcherFotos.setImageResource(imagenesPrueba[curIndex]);
-                    }
-
-                    else if (downX - upX > -100) {
-
-                        curIndex++;
-                        if (curIndex > 4) {
-                            curIndex = 0;
-                        }
-
-                        imageSwitcherFotos.setInAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_in_right));
-                        imageSwitcherFotos.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_out_left));
-
-                        imageSwitcherFotos.setImageResource(imagenesPrueba[curIndex]);
-                    }
-                    return true;
-                }
                 return false;
             }
         });
 
-        */
+        final ImageButton sigButon = (ImageButton) findViewById(R.id.infoSiguienteMascotaBoton);
+
+        sigButon.setOnTouchListener(new ImageButton.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent e) {
+
+                if(e.getAction() == MotionEvent.ACTION_UP){
+                    finish();
+                }
+
+                return false;
+            }
+        });
 
     }
 

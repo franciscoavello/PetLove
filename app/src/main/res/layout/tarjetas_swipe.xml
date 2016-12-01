@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/imagenMascota"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/perro_jugando"
+            android:scaleType="centerCrop"
+            app:siRadius="18dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/imagenLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradiente">
+
+            <TextView
+                android:id="@+id/descripcionMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Santiago"
+                android:textColor="#AAAAAA"
+                android:textSize="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/labelMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@+id/labelMascota"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_above="@+id/descripcionMascota"/>
+
+            <ImageButton
+                android:id="@+id/iconoInformacion"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_info"
+                android:background="@android:color/transparent"
+                android:rotation="180"/>
+
+
+        </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>
