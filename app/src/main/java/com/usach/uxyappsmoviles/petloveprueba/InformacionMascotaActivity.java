@@ -21,6 +21,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
+
 public class InformacionMascotaActivity extends AppCompatActivity {
 
     Integer[] imagenesPrueba = {R.drawable.perro01,R.drawable.perro02, R.drawable.perro03, R.drawable.perro04, R.drawable.perro06};
@@ -49,6 +52,17 @@ public class InformacionMascotaActivity extends AppCompatActivity {
         TextView descripcionMascotaInfo = (TextView) findViewById(R.id.descripcionMascotaInfo);
         descripcionMascotaInfo.setText(descripciones[0] + " \ud83d\ude01 \uD83D\uDE01 \uD83D\uDE01");
 
+
+        CarouselView carouselView;
+
+
+            carouselView = (CarouselView) findViewById(R.id.carouselView);
+            carouselView.setPageCount(imagenesPrueba.length);
+
+            carouselView.setImageListener(imageListener);
+
+
+        /*
         imageSwitcherFotos = (ImageSwitcher) findViewById(R.id.imageSwitcherInfo);
         imageSwitcherFotos.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
@@ -117,7 +131,19 @@ public class InformacionMascotaActivity extends AppCompatActivity {
             }
         });
 
+        */
+
     }
+
+
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(imagenesPrueba[position]);
+        }
+    };
+
     @Override
     public boolean onSupportNavigateUp(){
         finish();

@@ -9,40 +9,53 @@
     tools:context="com.usach.uxyappsmoviles.petloveprueba.InformacionMascotaActivity">
 
 
-    <ImageSwitcher
-        android:id="@+id/imageSwitcherInfo"
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
         android:layout_width="match_parent"
-        app:layout_heightPercent="50%"/>
+        app:layout_heightPercent="50%"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="2000"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="1dp"
+        app:disableAutoPlayOnUserInteraction="true"/>
 
     <LinearLayout
-        android:id="@+id/infoImportante"
-        android:layout_below="@id/imageSwitcherInfo"
-        android:layout_width="match_parent"
+        android:id="@+id/infoPrincipalMascota"
         app:layout_heightPercent="10%"
         app:layout_marginLeftPercent="5%"
         app:layout_marginRightPercent="5%"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_below="@id/carouselView"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:text="Ubicación: "
-            android:textSize="15dp"
+            android:id="@+id/nombreInfoMascota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/carouselView"
+            android:text="Bobby"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:textColor="@color/primaryText"/>
 
         <TextView
             android:id="@+id/ubicacionInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombreInfoMascota"
             android:textSize="15dp"
             android:textColor="@color/primaryText"/>
+
     </LinearLayout>
+
+
 
     <View style="@style/Divider"
         android:id="@+id/separador1"
-        android:layout_below="@id/infoImportante"/>
+        android:layout_below="@id/infoPrincipalMascota"/>
 
         <TextView
             android:layout_below="@id/separador1"
