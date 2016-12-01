@@ -49,7 +49,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="-431">
               <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
               <folding />
             </state>
@@ -86,16 +86,12 @@
       <file leaf-file-name="BuscarFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/BuscarFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="257" column="74" selection-start-line="257" selection-start-column="74" selection-end-line="257" selection-end-column="74" />
+            <state relative-caret-position="50">
+              <caret line="167" column="69" selection-start-line="167" selection-start-column="69" selection-end-line="167" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9920#10902#0" expanded="true" />
-                <element signature="e#10901#10902#0" expanded="true" />
-                <marker date="1480629728638" expanded="false" signature="3117:3235" ph="(v, e) → {" />
-                <marker date="1480629728638" expanded="false" signature="5465:5480" ph="}" />
-                <marker date="1480629728638" expanded="false" signature="5632:5750" ph="(v, e) → {" />
-                <marker date="1480629728638" expanded="false" signature="7980:7995" ph="}" />
+                <element signature="e#5828#6810#0" expanded="true" />
+                <element signature="e#6809#6810#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,7 +139,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="-221">
               <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
               <folding />
             </state>
@@ -2588,6 +2584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2635,6 +2632,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2721,6 +2719,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2728,6 +2727,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2805,6 +2805,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2813,6 +2814,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2917,17 +2919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tarjetas_swipe.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/usach/uxyappsmoviles/petloveprueba/adapters/TarjetaAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -2951,12 +2942,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/tarjetas_swipe.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_buscar.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="-431">
           <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
           <folding />
         </state>
@@ -2964,16 +2966,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/BuscarFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="257" column="74" selection-start-line="257" selection-start-column="74" selection-end-line="257" selection-end-column="74" />
+        <state relative-caret-position="50">
+          <caret line="167" column="69" selection-start-line="167" selection-start-column="69" selection-end-line="167" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9920#10902#0" expanded="true" />
-            <element signature="e#10901#10902#0" expanded="true" />
-            <marker date="1480629728638" expanded="false" signature="3117:3235" ph="(v, e) → {" />
-            <marker date="1480629728638" expanded="false" signature="5465:5480" ph="}" />
-            <marker date="1480629728638" expanded="false" signature="5632:5750" ph="(v, e) → {" />
-            <marker date="1480629728638" expanded="false" signature="7980:7995" ph="}" />
+            <element signature="e#5828#6810#0" expanded="true" />
+            <element signature="e#6809#6810#0" expanded="true" />
           </folding>
         </state>
       </provider>

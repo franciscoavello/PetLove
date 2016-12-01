@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -90,114 +92,6 @@ public class BuscarFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
 
-
-
-/*
-        com.github.siyamed.shapeimageview.RoundedImageView imagenBuscar = (com.github.siyamed.shapeimageview.RoundedImageView) view.findViewById(R.id.imagenMascota);
-        imagenBuscar.setTag(R.drawable.perro_jugando);
-        imagenBuscar.setImageResource(R.drawable.perro_jugando);
-
-
-
-        final ImageButton likeButon = (ImageButton) view.findViewById(R.id.likeMascotaBoton);
-
-        likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent e) {
-
-                if(e.getAction() == MotionEvent.ACTION_UP){
-
-                    final ImageView imagenMasco = (ImageView) view.findViewById(R.id.imagenMascota);
-                    final RelativeLayout relavImagen = (RelativeLayout) view.findViewById(R.id.imagenLayout);
-                    final TextView nombreMasco = (TextView) view.findViewById(R.id.nombreMascotaBuscar);
-                    final TextView lugarMasco = (TextView) view.findViewById(R.id.descripcionMascota);
-
-                    Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
-                    imagenMasco.startAnimation(fadeOut);
-                    relavImagen.startAnimation(fadeOut);
-
-                    fadeOut.setAnimationListener(new Animation.AnimationListener() {
-                        @Override
-                        public void onAnimationStart(Animation animation) {
-                        }
-                        @Override
-                        public void onAnimationEnd(Animation animation) {
-                            TypedArray images = getResources().obtainTypedArray(R.array.imagenesPrueba);
-                            String[] nombres = getResources().getStringArray(R.array.nombresPerros);
-                            String[] lugares = getResources().getStringArray(R.array.lugares);
-                            int random = (int) (Math.random() * images.length());
-                            imagenMasco.setImageResource(images.getResourceId(random, R.drawable.perro01));
-                            imagenMasco.setTag(images.getResourceId(random, R.drawable.perro01));
-                            nombreMasco.setText(nombres[random]);
-                            lugarMasco.setText(lugares[random]);
-                            Animation fadeIn = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in);
-                            imagenMasco.startAnimation(fadeIn);
-                            relavImagen.startAnimation(fadeIn);
-                        }
-                        @Override
-                        public void onAnimationRepeat(Animation animation) {
-                        }
-                    });
-
-                }
-
-                return false;
-            }
-        });
-
-
-        final ImageButton siguienteBoton = (ImageButton) view.findViewById(R.id.siguienteMascotaBoton);
-
-        siguienteBoton.setOnTouchListener(new ImageButton.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent e) {
-
-                if(e.getAction() == MotionEvent.ACTION_UP){
-
-                    final ImageView imagenMasco = (ImageView) view.findViewById(R.id.imagenMascota);
-                    final RelativeLayout relavImagen = (RelativeLayout) view.findViewById(R.id.imagenLayout);
-                    final TextView nombreMasco = (TextView) view.findViewById(R.id.nombreMascotaBuscar);
-                    final TextView lugarMasco = (TextView) view.findViewById(R.id.descripcionMascota);
-
-                    Animation fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out);
-                    imagenMasco.startAnimation(fadeOut);
-                    relavImagen.startAnimation(fadeOut);
-
-                    fadeOut.setAnimationListener(new Animation.AnimationListener() {
-                        @Override
-                        public void onAnimationStart(Animation animation) {
-                        }
-                        @Override
-                        public void onAnimationEnd(Animation animation) {
-                            TypedArray images = getResources().obtainTypedArray(R.array.imagenesPrueba);
-                            String[] nombres = getResources().getStringArray(R.array.nombresPerros);
-                            String[] lugares = getResources().getStringArray(R.array.lugares);
-                            int random = (int) (Math.random() * images.length());
-                            imagenMasco.setImageResource(images.getResourceId(random, R.drawable.perro01));
-                            imagenMasco.setTag(images.getResourceId(random, R.drawable.perro01));
-                            nombreMasco.setText(nombres[random]);
-                            lugarMasco.setText(lugares[random]);
-                            Animation fadeIn = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in);
-                            imagenMasco.startAnimation(fadeIn);
-                            relavImagen.startAnimation(fadeIn);
-                        }
-                        @Override
-                        public void onAnimationRepeat(Animation animation) {
-                        }
-                    });
-
-                }
-
-                return false;
-            }
-        });
-
-*/
-
-
-
         //add the view via xml or programmatically
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
 
@@ -242,6 +136,40 @@ public class BuscarFragment extends Fragment {
             @Override
             public void onScroll(float v) {
 
+            }
+        });
+
+        final ImageButton likeButon = (ImageButton) view.findViewById(R.id.likeMascotaBoton);
+
+        likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent e) {
+
+                if(e.getAction() == MotionEvent.ACTION_UP){
+                    SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
+                    flingContainer.getTopCardListener().selectRight();
+
+                }
+
+                return false;
+            }
+        });
+
+        final ImageButton unlikeButon = (ImageButton) view.findViewById(R.id.siguienteMascotaBoton);
+
+        likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent e) {
+
+                if(e.getAction() == MotionEvent.ACTION_UP){
+                    SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
+                    flingContainer.getTopCardListener().selectLeft();
+
+                }
+
+                return false;
             }
         });
 
