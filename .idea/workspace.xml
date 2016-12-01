@@ -86,12 +86,14 @@
       <file leaf-file-name="BuscarFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/BuscarFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="167" column="69" selection-start-line="167" selection-start-column="69" selection-end-line="167" selection-end-column="69" />
+            <state relative-caret-position="33">
+              <caret line="160" column="19" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5828#6810#0" expanded="true" />
-                <element signature="e#6809#6810#0" expanded="true" />
+                <element signature="e#5294#5731#0" expanded="true" />
+                <element signature="e#5730#5731#0" expanded="true" />
+                <element signature="e#5830#6812#0" expanded="true" />
+                <element signature="e#6811#6812#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2966,12 +2968,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/layout/BuscarFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="167" column="69" selection-start-line="167" selection-start-column="69" selection-end-line="167" selection-end-column="69" />
+        <state relative-caret-position="33">
+          <caret line="160" column="19" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5828#6810#0" expanded="true" />
-            <element signature="e#6809#6810#0" expanded="true" />
+            <element signature="e#5294#5731#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#5830#6812#0" expanded="true" />
+            <element signature="e#6811#6812#0" expanded="true" />
           </folding>
         </state>
       </provider>

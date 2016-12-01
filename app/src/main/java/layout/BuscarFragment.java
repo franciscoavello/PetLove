@@ -158,7 +158,7 @@ public class BuscarFragment extends Fragment {
 
         final ImageButton unlikeButon = (ImageButton) view.findViewById(R.id.siguienteMascotaBoton);
 
-        likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
+        unlikeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent e) {
