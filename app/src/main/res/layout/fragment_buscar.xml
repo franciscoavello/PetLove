@@ -43,17 +43,6 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/likeMascotaBoton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center"
-                android:background="@drawable/estados_boton"
-                android:src="@drawable/ic_like"
-                android:tint="@color/rojo"
-                android:elevation="5dp"/>
-
-            <ImageButton
                 android:id="@+id/siguienteMascotaBoton"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -62,6 +51,19 @@
                 android:src="@drawable/ic_dislike"
                 android:tint="@color/azul"
                 android:elevation="5dp"/>
+
+            <ImageButton
+                android:id="@+id/likeMascotaBoton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/estados_boton"
+                android:src="@drawable/ic_like"
+                android:tint="@color/rojo"
+                android:elevation="5dp"/>
+
+
 
         </LinearLayout>
 
