@@ -3,23 +3,16 @@ package layout;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 import com.usach.uxyappsmoviles.petloveprueba.InformacionMascotaActivity;
@@ -29,7 +22,6 @@ import com.usach.uxyappsmoviles.petloveprueba.modelos.Tarjeta;
 
 import java.util.ArrayList;
 
-import static android.R.style.Animation;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,13 +33,12 @@ import static android.R.style.Animation;
 public class BuscarFragment extends Fragment {
 
 
-    ArrayList<String> nombresArray;
-    ArrayList<String> lugaresArray;
-    ArrayList<String> imagenesArray;
     TarjetaAdapter arrayAdapter;
     private ArrayList<Tarjeta> listaTarjetas;
     private final static int RESULTADO_INFORMACION = 0;
 
+    private ImageButton likeButon;
+    private ImageButton unlikeButon;
     public void llenarTarjetas(){
         Tarjeta tarjeta = new Tarjeta("Kiara","Santiago",R.drawable.perro01);
         listaTarjetas.add(tarjeta);
@@ -135,7 +126,7 @@ public class BuscarFragment extends Fragment {
             }
         });
 
-        final ImageButton likeButon = (ImageButton) view.findViewById(R.id.likeMascotaBoton);
+        likeButon = (ImageButton) view.findViewById(R.id.likeMascotaBoton);
 
         likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
 
@@ -151,7 +142,7 @@ public class BuscarFragment extends Fragment {
             }
         });
 
-        final ImageButton unlikeButon = (ImageButton) view.findViewById(R.id.siguienteMascotaBoton);
+        unlikeButon = (ImageButton) view.findViewById(R.id.siguienteMascotaBoton);
 
         unlikeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
 
@@ -184,9 +175,6 @@ public class BuscarFragment extends Fragment {
             }
         });
 
-
-
-
         return view;
     }
 
@@ -211,7 +199,7 @@ public class BuscarFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RESULTADO_INFORMACION){
             switch (resultCode) {
-                case Activity.RESULT_OK:
+                case 1:
                     final Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -221,7 +209,7 @@ public class BuscarFragment extends Fragment {
                         }
                     }, 300);
                     break;
-                case Activity.RESULT_CANCELED:
+                case 2:
                     final Handler handler2 = new Handler();
                     handler2.postDelayed(new Runnable() {
                         @Override
@@ -231,9 +219,9 @@ public class BuscarFragment extends Fragment {
                         }
                     }, 300);
                     break;
+                case Activity.RESULT_CANCELED:
+                    break;
             }
         }
     }
-
-
 }

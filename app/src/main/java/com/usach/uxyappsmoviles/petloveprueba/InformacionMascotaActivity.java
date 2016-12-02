@@ -67,7 +67,7 @@ public class InformacionMascotaActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent e) {
 
                 if(e.getAction() == MotionEvent.ACTION_UP){
-                    setResult(RESULT_OK);
+                    setResult(1);
                     finish();
                 }
 
@@ -83,6 +83,7 @@ public class InformacionMascotaActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent e) {
 
                 if(e.getAction() == MotionEvent.ACTION_UP){
+                    setResult(2);
                     finish();
                 }
 
@@ -103,6 +104,7 @@ public class InformacionMascotaActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp(){
+        setResult(RESULT_CANCELED);
         finish();
         return true;
     }
