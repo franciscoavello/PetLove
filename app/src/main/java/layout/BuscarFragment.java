@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -32,13 +33,13 @@ import java.util.ArrayList;
  */
 public class BuscarFragment extends Fragment {
 
-
     TarjetaAdapter arrayAdapter;
     private ArrayList<Tarjeta> listaTarjetas;
     private final static int RESULTADO_INFORMACION = 0;
 
     private ImageButton likeButon;
     private ImageButton unlikeButon;
+
     public void llenarTarjetas(){
         Tarjeta tarjeta = new Tarjeta("Kiara","Santiago",R.drawable.perro01);
         listaTarjetas.add(tarjeta);
@@ -48,7 +49,6 @@ public class BuscarFragment extends Fragment {
 
         tarjeta = new Tarjeta("Bambi","Recoleta",R.drawable.perro03);
         listaTarjetas.add(tarjeta);
-
 
         tarjeta = new Tarjeta("Goku","La Cisterna",R.drawable.perro04);
         listaTarjetas.add(tarjeta);
@@ -79,12 +79,12 @@ public class BuscarFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
         listaTarjetas = new ArrayList<Tarjeta>();
@@ -114,7 +114,6 @@ public class BuscarFragment extends Fragment {
 
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
-                // Ask for more data here
                 Tarjeta tarjeta = new Tarjeta("ENSERUI","Probando",R.drawable.perro05);
                 listaTarjetas.add(tarjeta);
                 arrayAdapter.notifyDataSetChanged();

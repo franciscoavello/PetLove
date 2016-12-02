@@ -24,7 +24,7 @@
 
     <LinearLayout
         android:id="@+id/infoPrincipalMascota"
-        app:layout_heightPercent="10%"
+        app:layout_heightPercent="12%"
         app:layout_marginLeftPercent="5%"
         app:layout_marginRightPercent="5%"
         android:layout_width="match_parent"
@@ -57,22 +57,31 @@
         android:id="@+id/separador1"
         android:layout_below="@id/infoPrincipalMascota"/>
 
-        <TextView
-            android:layout_below="@id/separador1"
+    <ScrollView
+        android:layout_below="@id/separador1"
+        android:id="@+id/ScrollView01"
+        app:layout_heightPercent="20%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginRightPercent="5%"
+        app:layout_widthPercent="90%">
+
+
+    <TextView
+
             android:id="@+id/descripcionMascotaInfo"
             android:layout_width="match_parent"
-            app:layout_heightPercent="20%"
-            app:layout_marginLeftPercent="5%"
-            app:layout_marginRightPercent="5%"
+            android:layout_height="match_parent"
             android:textSize="15dp"
             android:textColor="@color/secondaryText"/>
 
+    </ScrollView>
+
     <View style="@style/Divider"
         android:id="@+id/separador2"
-        android:layout_below="@id/descripcionMascotaInfo"/>
+        android:layout_below="@id/ScrollView01"/>
 
     <RelativeLayout
-        app:layout_heightPercent="20%"
+        app:layout_heightPercent="18%"
         android:layout_width="match_parent"
         android:layout_below="@id/separador2">
 
@@ -85,8 +94,8 @@
 
             <ImageButton
                 android:id="@+id/infoSiguienteMascotaBoton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:background="@drawable/estados_boton"
                 android:src="@drawable/ic_dislike"
@@ -95,8 +104,8 @@
 
             <ImageButton
                 android:id="@+id/infoLikeMascotaBoton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center"
                 android:background="@drawable/estados_boton"

@@ -41,16 +41,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_above="@+id/descripcionMascota"/>
 
-            <ImageButton
-                android:id="@+id/iconoInformacion"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_margin="20dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_info"
-                android:background="@android:color/transparent"
-                android:rotation="180"/>
+
 
 
         </RelativeLayout>

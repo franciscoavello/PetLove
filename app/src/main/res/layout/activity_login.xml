@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<android.support.percent.PercentRelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente_appbar">
 
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/relativeLogo"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="56dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        app:layout_heightPercent="30%"
+        app:layout_widthPercent="90%"
+        app:layout_marginTopPercent = "10%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginRightPercent="5%">
 
 
         <ImageView android:src="@drawable/logo"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeEdittextUser"
+        android:layout_below="@id/relativeLogo"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="90%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginRightPercent="5%"
+        android:gravity="center_vertical">
+
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/usuario_text_input_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco" >
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/nombreUsuario"
@@ -35,15 +46,27 @@
                 android:layout_centerVertical="true"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="Nombre de usuario" />
+                android:hint="Nombre de usuario"
+                android:textColor="@color/blanco"/>
 
         </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeEdittextPass"
+        android:layout_below="@id/relativeEdittextUser"
+        android:orientation="vertical"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="90%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginRightPercent="5%"
+        android:gravity="center_vertical">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/contrasena_text_input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/blanco"
             app:passwordToggleEnabled="false" >
 
             <EditText
@@ -54,20 +77,28 @@
                 android:layout_centerVertical="true"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:hint="Contraseña"/>
+                android:hint="Contraseña"
+                android:textColor="@color/blanco"/>
 
         </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="90%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginRightPercent="5%"
+        android:layout_below="@id/relativeEdittextPass">
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp"
             android:text="Iniciar sesión"
             android:background="@color/colorPrimaryDark"
-            android:textColor="@color/blanco"/>
+            android:textColor="@color/blanco"
+            android:clickable="true"/>
+    </RelativeLayout>
 
-    </LinearLayout>
-</ScrollView>
+</android.support.percent.PercentRelativeLayout >
