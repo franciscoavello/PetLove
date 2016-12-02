@@ -1,10 +1,12 @@
 package layout;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,9 +28,6 @@ import com.usach.uxyappsmoviles.petloveprueba.adapters.TarjetaAdapter;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Tarjeta;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import static android.R.style.Animation;
 
@@ -47,24 +46,29 @@ public class BuscarFragment extends Fragment {
     ArrayList<String> imagenesArray;
     TarjetaAdapter arrayAdapter;
     private ArrayList<Tarjeta> listaTarjetas;
-
-    int i=0;
+    private final static int RESULTADO_INFORMACION = 0;
 
     public void llenarTarjetas(){
-        Tarjeta tarjeta = new Tarjeta("ENSERUI","Probando",R.drawable.perro01);
+        Tarjeta tarjeta = new Tarjeta("Kiara","Santiago",R.drawable.perro01);
         listaTarjetas.add(tarjeta);
 
-        tarjeta = new Tarjeta("ENSERfdfdUI","Prfdfdfobando",R.drawable.perro02);
+        tarjeta = new Tarjeta("Annie","Las Condes",R.drawable.perro02);
         listaTarjetas.add(tarjeta);
 
-        tarjeta = new Tarjeta("sdf","rerewrwe",R.drawable.perro03);
+        tarjeta = new Tarjeta("Bambi","Recoleta",R.drawable.perro03);
         listaTarjetas.add(tarjeta);
 
 
-        tarjeta = new Tarjeta("er","erwww",R.drawable.perro04);
+        tarjeta = new Tarjeta("Goku","La Cisterna",R.drawable.perro04);
         listaTarjetas.add(tarjeta);
 
-        tarjeta = new Tarjeta("sdqdwq","er",R.drawable.perro05);
+        tarjeta = new Tarjeta("Toby","Arica",R.drawable.perro05);
+        listaTarjetas.add(tarjeta);
+
+        tarjeta = new Tarjeta("Doki","Punta Arenas",R.drawable.perro06);
+        listaTarjetas.add(tarjeta);
+
+        tarjeta = new Tarjeta("Bobby","Rancagua",R.drawable.perro_jugando);
         listaTarjetas.add(tarjeta);
 
     }
@@ -91,18 +95,10 @@ public class BuscarFragment extends Fragment {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
-
-        //add the view via xml or programmatically
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
-
         listaTarjetas = new ArrayList<Tarjeta>();
         llenarTarjetas();
-
-        //choose your favorite adapter
         arrayAdapter = new TarjetaAdapter(getActivity(), listaTarjetas);
-
-        //set the listener and the adapter
-        //flingContainer.setAdapter(adapter);
         flingContainer.setAdapter(arrayAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
@@ -117,12 +113,12 @@ public class BuscarFragment extends Fragment {
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-                Toast.makeText(getActivity(), "Siguiente", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "Siguiente", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                Toast.makeText(getActivity(), "Like", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "Like", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -149,7 +145,6 @@ public class BuscarFragment extends Fragment {
                 if(e.getAction() == MotionEvent.ACTION_UP){
                     SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
                     flingContainer.getTopCardListener().selectRight();
-
                 }
 
                 return false;
@@ -185,9 +180,10 @@ public class BuscarFragment extends Fragment {
                 intent.putExtra("nombreMascota",tarjeta.getNombreMascota());
                 intent.putExtra("imagenMascota",tarjeta.getImagenMascota());
                 intent.putExtra("ubicacionMascota", tarjeta.getDescripcionMascota());
-                startActivity(intent);
+                startActivityForResult(intent, RESULTADO_INFORMACION);
             }
         });
+
 
 
 
@@ -197,6 +193,7 @@ public class BuscarFragment extends Fragment {
     public void onButtonPressed(Uri uri) {
 
     }
+
 
     @Override
     public void onAttach(Context context) {
@@ -208,5 +205,35 @@ public class BuscarFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == RESULTADO_INFORMACION){
+            switch (resultCode) {
+                case Activity.RESULT_OK:
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) getView().findViewById(R.id.frame);
+                            flingContainer.getTopCardListener().selectRight();
+                        }
+                    }, 300);
+                    break;
+                case Activity.RESULT_CANCELED:
+                    final Handler handler2 = new Handler();
+                    handler2.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            SwipeFlingAdapterView flingContainer2 = (SwipeFlingAdapterView) getView().findViewById(R.id.frame);
+                            flingContainer2 .getTopCardListener().selectLeft();
+                        }
+                    }, 300);
+                    break;
+            }
+        }
+    }
+
 
 }

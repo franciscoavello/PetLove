@@ -133,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="86be5a1e4c863597d021c078ace3e7f0e5a618a6">
+        sha1="3a2cf43bedeae3759e2c0349fd9501e0982babc7">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9eddf0b2ec66408f1465d8347bf330a2d3ce15ce\classes.dex" />
     </item>
     <item
@@ -205,7 +205,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="676e67415530182f97b4cc5eb71cf0ae232c319a">
+        sha1="d041316c80b633624ac9280b57bce18d3c18e850">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_02a42da216504a23f4416115e24bff1406fda1ec\classes.dex" />
     </item>
     <item

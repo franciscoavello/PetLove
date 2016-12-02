@@ -1,28 +1,22 @@
 package com.usach.uxyappsmoviles.petloveprueba;
 
-import android.content.res.TypedArray;
-import android.graphics.Point;
-import android.graphics.drawable.Animatable;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ViewSwitcher;
 
+import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
+import com.usach.uxyappsmoviles.petloveprueba.adapters.TarjetaAdapter;
+
+import layout.BuscarFragment;
 
 public class InformacionMascotaActivity extends AppCompatActivity {
 
@@ -32,6 +26,7 @@ public class InformacionMascotaActivity extends AppCompatActivity {
     int image_link = 0;
     int curIndex=0;
     int downX,upX;
+    TarjetaAdapter adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +67,7 @@ public class InformacionMascotaActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent e) {
 
                 if(e.getAction() == MotionEvent.ACTION_UP){
+                    setResult(RESULT_OK);
                     finish();
                 }
 
