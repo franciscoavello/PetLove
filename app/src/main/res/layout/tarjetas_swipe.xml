@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -24,7 +23,7 @@
                 android:id="@+id/descripcionMascota"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Santiago"
+                android:text="Ubicación"
                 android:textColor="#AAAAAA"
                 android:textSize="15dp"
                 android:layout_alignParentBottom="true"
@@ -35,15 +34,13 @@
                 android:id="@+id/labelMascota"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@+id/labelMascota"
+                android:text="Nombre"
                 android:textColor="#FFFFFF"
                 android:textSize="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_above="@+id/descripcionMascota"/>
 
 
-
-
         </RelativeLayout>
 
-</android.support.percent.PercentRelativeLayout>
+</RelativeLayout>

@@ -1,17 +1,12 @@
 package com.usach.uxyappsmoviles.petloveprueba;
 
 import android.content.DialogInterface;
-import android.content.res.Configuration;
 import android.graphics.Point;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Display;
-import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 public class AgregarMascotaActivity extends AppCompatActivity {

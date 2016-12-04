@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -206,7 +205,7 @@ public class BuscarFragment extends Fragment {
                             SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) getView().findViewById(R.id.frame);
                             flingContainer.getTopCardListener().selectRight();
                         }
-                    }, 300);
+                    }, 350);
                     break;
                 case 2:
                     final Handler handler2 = new Handler();
@@ -216,7 +215,7 @@ public class BuscarFragment extends Fragment {
                             SwipeFlingAdapterView flingContainer2 = (SwipeFlingAdapterView) getView().findViewById(R.id.frame);
                             flingContainer2 .getTopCardListener().selectLeft();
                         }
-                    }, 300);
+                    }, 350);
                     break;
                 case Activity.RESULT_CANCELED:
                     break;

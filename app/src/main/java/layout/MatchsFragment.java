@@ -2,6 +2,7 @@ package layout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.icu.text.DateFormat;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,16 +14,34 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.usach.uxyappsmoviles.petloveprueba.AgregarMascotaActivity;
 import com.usach.uxyappsmoviles.petloveprueba.ContactoDatosActivity;
 import com.usach.uxyappsmoviles.petloveprueba.R;
+import com.usach.uxyappsmoviles.petloveprueba.adapters.ElementoMatchAdapter;
+import com.usach.uxyappsmoviles.petloveprueba.modelos.ElementoMatch;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 public class MatchsFragment extends Fragment {
 
     private ListView list;
+    private ArrayList<ElementoMatch> listaMatchs;
+    ElementoMatchAdapter matchsAdapter;
+
 
     public MatchsFragment() {
         // Required empty public constructor
+    }
+
+    public void llenarMatchs(){
+
+        Date date = new Date();
+        
+        ElementoMatch elementoMatch = new ElementoMatch("Kiara","Juan Pérez",R.drawable.perro02,"Santiago","francisco.avello@usach.cl","+56995039843",date);
+        listaMatchs.add(elementoMatch);
+
+        elementoMatch = new ElementoMatch("Goku","Ana Valencia",R.drawable.perro06,"Coquimbo","anita.linda@usach.cl","+56989094567",date);
+        listaMatchs.add(elementoMatch);
     }
 
 
@@ -44,15 +63,18 @@ public class MatchsFragment extends Fragment {
         // Inflate the layout for this fragment
 
         final View view = inflater.inflate(R.layout.fragment_matchs, container, false);
+        listaMatchs = new ArrayList<ElementoMatch>();
+        llenarMatchs();
+        matchsAdapter = new ElementoMatchAdapter(getActivity(), listaMatchs);
         list = (ListView) view.findViewById(R.id.lvMatchs);
-        String[] nombres = getResources().getStringArray(R.array.nombresPerros);
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(getActivity(), R.layout.row_layout, R.id.label, nombres);
-        list.setAdapter(adaptador);
+        list.setAdapter(matchsAdapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-                Toast.makeText(getContext(), "Has pulsado a " + arg0.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+                ElementoMatch seleccioando;
+                seleccioando = (ElementoMatch) list.getItemAtPosition(position);
+                Toast.makeText(getContext(), "Has pulsado a " + seleccioando.getNombreMascota() + " Su dueño es " + seleccioando.getNombreDueño(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), ContactoDatosActivity.class);
                 startActivity(intent);
 

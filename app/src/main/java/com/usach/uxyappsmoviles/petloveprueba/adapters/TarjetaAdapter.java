@@ -37,10 +37,4 @@ public class TarjetaAdapter extends ArrayAdapter<Tarjeta> {
         // Return the completed view to render on screen
         return convertView;
     }
-
-    public class ViewHolder{
-        public ImageView imageView;
-        public TextView txtNombre;
-        public TextView txtDescripcion;
-    }
 }
