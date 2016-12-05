@@ -21,12 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private int idUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        idUsuario = getIntent().getIntExtra("idUser",0);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().hide();
@@ -83,11 +84,23 @@ public class MainActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position){
                 case 0:
-                    return new BuscarFragment();
+                    Bundle args = new Bundle();
+                    args.putInt("idUser",idUsuario);
+                    BuscarFragment fragmentBuscar = new BuscarFragment();
+                    fragmentBuscar.setArguments(args);
+                    return fragmentBuscar;
                 case 1:
-                    return new MatchsFragment();
+                    args = new Bundle();
+                    args.putInt("idUser",idUsuario);
+                    MatchsFragment fragmentMatch = new MatchsFragment();
+                    fragmentMatch.setArguments(args);
+                    return fragmentMatch;
                 case 2:
-                    return new PerfilFragment();
+                    args = new Bundle();
+                    args.putInt("idUser",idUsuario);
+                    PerfilFragment fragmentPerfil = new PerfilFragment();
+                    fragmentPerfil.setArguments(args);
+                    return fragmentPerfil;
             }
             return null;
         }

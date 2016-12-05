@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PetLove.iml" filepath="$PROJECT_DIR$/PetLove.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-card-stack-0.1.5/android-card-stack-0.1.5.iml" filepath="$PROJECT_DIR$/android-card-stack-0.1.5/android-card-stack-0.1.5.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/smartloginlibrary-v0.5beta/smartloginlibrary-v0.5beta.iml" filepath="$PROJECT_DIR$/smartloginlibrary-v0.5beta/smartloginlibrary-v0.5beta.iml" />
     </modules>

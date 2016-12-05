@@ -133,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="e9d0cf462d43332f6558654d94f706ba391bb099">
+        sha1="5acc3ee28b1d50d48a4317f5091e9a7224c547f3">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9eddf0b2ec66408f1465d8347bf330a2d3ce15ce\classes.dex" />
     </item>
     <item
@@ -205,8 +205,17 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="087e5bc7c623d553f9ddd891190f3ad4c11380e6">
+        sha1="0056ba311906293c2e355427f8de9c71debcf46a">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_02a42da216504a23f4416115e24bff1406fda1ec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\in.arjsna\swipecardlib\1.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="adf2104f3b09c58544844389e4eb2f74e674a3bf">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\in.arjsna-swipecardlib-1.0.2_35da07056fca055cb95b5f264f90e4bf44281b6c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -225,6 +234,15 @@
         revision="24.0.3"
         sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\de.hdodenhof-circleimageview-2.1.0_fbab8815ef1ab114d54ca096babfe015376e70c5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3.1_973e56684ea6b0784a972ce83547b7eb85fc3268\classes.dex" />
     </item>
 
 </items>

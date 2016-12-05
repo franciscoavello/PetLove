@@ -33,5 +33,7 @@ dependencies {
     compile 'com.android.support:percent:24.2.0'
     compile 'com.synnapps:carouselview:0.0.10'
     compile 'com.lorentzos.swipecards:library:1.0.9'
+    compile 'in.arjsna:swipecardlib:1.0.2'
+    compile 'com.google.code.gson:gson:2.3.1'
     testCompile 'junit:junit:4.12'
 }

@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
@@ -21,6 +22,8 @@ import com.usach.uxyappsmoviles.petloveprueba.adapters.TarjetaAdapter;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Tarjeta;
 
 import java.util.ArrayList;
+
+import in.arjsna.swipecardlib.SwipeCardView;
 
 
 /**
@@ -85,19 +88,21 @@ public class BuscarFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
-        SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
+
         listaTarjetas = new ArrayList<Tarjeta>();
         llenarTarjetas();
         arrayAdapter = new TarjetaAdapter(getActivity(), listaTarjetas);
+
+        SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) view.findViewById(R.id.frame);
         flingContainer.setAdapter(arrayAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
+
             @Override
             public void removeFirstObjectInAdapter() {
                 // this is the simplest way to delete an object from the Adapter (/AdapterView)
                 listaTarjetas.remove(0);
                 arrayAdapter.notifyDataSetChanged();
             }
-
             @Override
             public void onLeftCardExit(Object dataObject) {
                 //Do something on the left!
@@ -157,6 +162,9 @@ public class BuscarFragment extends Fragment {
             }
         });
 
+
+
+
         // Optionally add an OnItemClickListener
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
@@ -164,7 +172,7 @@ public class BuscarFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), InformacionMascotaActivity.class);
                 TextView nombreMascotaIntent = (TextView) view.findViewById(R.id.labelMascota);
                 TextView ubicacionMascotaIntent = (TextView) view.findViewById(R.id.descripcionMascota);
-                com.github.siyamed.shapeimageview.RoundedImageView imagenMascotaIntent = (com.github.siyamed.shapeimageview.RoundedImageView) view.findViewById(R.id.imagenMascota);
+                ImageView imagenMascotaIntent = (ImageView) view.findViewById(R.id.imagenMascota);
                 Tarjeta tarjeta = (Tarjeta) dataObject;
                 intent.putExtra("nombreMascota",tarjeta.getNombreMascota());
                 intent.putExtra("imagenMascota",tarjeta.getImagenMascota());

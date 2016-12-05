@@ -5,13 +5,24 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.usach.uxyappsmoviles.petloveprueba.AgregarMascotaActivity;
+import com.usach.uxyappsmoviles.petloveprueba.MyApplication;
 import com.usach.uxyappsmoviles.petloveprueba.R;
+import com.usach.uxyappsmoviles.petloveprueba.modelos.Mascota;
+import com.usach.uxyappsmoviles.petloveprueba.modelos.Usuario;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 
 public class PerfilFragment extends Fragment{
@@ -36,6 +47,16 @@ public class PerfilFragment extends Fragment{
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_perfil,null,false);
+
+        TextView nombrePerfil = (TextView) view.findViewById(R.id.nombrePerfil);
+        String nombre = ((MyApplication) getActivity().getApplication()).getUserSesion().getNombreUsuario() + " " + ((MyApplication) getActivity().getApplication()).getUserSesion().getApellidoPaternoUsuario();
+        nombrePerfil.setText(nombre);
+
+        TextView ubicacionPerfil = (TextView) view.findViewById(R.id.ubicacionPerfil);
+        String ubicacion = ((MyApplication) getActivity().getApplication()).getUserSesion().getCiudadUsuario() + ", " + ((MyApplication) getActivity().getApplication()).getUserSesion().getPaisUsuario();
+        ubicacionPerfil.setText(ubicacion);
+
+
 
         ImageButton agregarMascotaBoton = (ImageButton) view.findViewById(R.id.agregarMascotaBoton);
         agregarMascotaBoton.setOnClickListener(new View.OnClickListener() {

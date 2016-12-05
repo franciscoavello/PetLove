@@ -1,13 +1,18 @@
 package com.usach.uxyappsmoviles.petloveprueba.adapters;
 
 import android.content.Context;
+import android.support.v7.widget.ViewUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.siyamed.shapeimageview.RoundedImageView;
 import com.usach.uxyappsmoviles.petloveprueba.R;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Tarjeta;
 import java.util.List;
@@ -19,7 +24,7 @@ public class TarjetaAdapter extends ArrayAdapter<Tarjeta> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
         Tarjeta tarjeta = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
@@ -35,6 +40,7 @@ public class TarjetaAdapter extends ArrayAdapter<Tarjeta> {
         tvDescripcion.setText(tarjeta.getDescripcionMascota());
         tvImagen.setImageResource(tarjeta.getImagenMascota());
         // Return the completed view to render on screen
+
         return convertView;
     }
 }
