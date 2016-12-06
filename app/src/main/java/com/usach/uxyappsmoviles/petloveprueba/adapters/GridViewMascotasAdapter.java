@@ -15,9 +15,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.usach.uxyappsmoviles.petloveprueba.EditarMascotaActivity;
 import com.usach.uxyappsmoviles.petloveprueba.R;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Mascota;
 
@@ -37,6 +41,8 @@ public class GridViewMascotasAdapter extends BaseAdapter {
 
     private Context ctx;
     private ArrayList<Mascota> datos;
+    private final static int RESULTADO_EDITAR= 0;
+
 
     public GridViewMascotasAdapter(Context context, ArrayList<Mascota> datos)
     {
@@ -62,11 +68,14 @@ public class GridViewMascotasAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         // Get the data item for this position
         //Cargo un Custom Edittext en cada celda
         LayoutInflater inflater = ((Activity) ctx).getLayoutInflater();
         convertView = inflater.inflate(R.layout.grid_mascotas, parent, false);
+
+        TextView mascotaNombre = (TextView) convertView.findViewById(R.id.nombreMascotaPerfil);
+        mascotaNombre.setText(datos.get(position).getNombreMascota());
 
         ImageView mascotaImagen = (ImageView) convertView.findViewById(R.id.mascota);
 
@@ -101,5 +110,6 @@ public class GridViewMascotasAdapter extends BaseAdapter {
 
         return convertView;
     }
+
 
 }
