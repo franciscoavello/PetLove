@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class LoginActivity extends AppCompatActivity {
 
     private Usuario user;
-    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,7 +157,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
         startActivity(intent);
-        progressDialog.dismiss();
         finish();
     }
 
@@ -166,7 +164,6 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), "¡Error! Correo y/o contraseña incorrectos", Toast.LENGTH_LONG).show();
         android.support.v7.widget.AppCompatButton logear = (android.support.v7.widget.AppCompatButton) findViewById(R.id.btn_login);
         logear.setEnabled(true);
-        progressDialog.dismiss();
     }
 
     public void login() {
@@ -179,7 +176,7 @@ public class LoginActivity extends AppCompatActivity {
         android.support.v7.widget.AppCompatButton logear = (android.support.v7.widget.AppCompatButton) findViewById(R.id.btn_login);
         logear.setEnabled(false);
 
-        progressDialog = new ProgressDialog(LoginActivity.this,
+        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
@@ -207,12 +204,14 @@ public class LoginActivity extends AppCompatActivity {
                                 String contra = jsonObject.getString("contrasena");
                                 if((emailUsuarioIngresado.contentEquals(email)) && passwordUsuarioIngresado.contentEquals(contra)){
                                     onLoginSuccess(id);
+                                    progressDialog.dismiss();
                                     break;
                                 }
                                 else if (i==jsonArray.length()-1){
                                     onLoginFailed();
                                     Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                                     v.vibrate(200);
+                                    progressDialog.dismiss();
                                 }
                             }
                         } catch (JSONException e) {
