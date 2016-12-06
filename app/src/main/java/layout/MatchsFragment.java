@@ -34,10 +34,10 @@ public class MatchsFragment extends Fragment {
 
         Date date = new Date();
         
-        ElementoMatch elementoMatch = new ElementoMatch("Kiara","Juan Pérez",R.drawable.perro02,"Santiago","francisco.avello@usach.cl","+56995039843",date);
+        ElementoMatch elementoMatch = new ElementoMatch("Kiara","Juan Pérez",R.drawable.perro02,"Santiago","francisco.avello@usach.cl","56995039843",date);
         listaMatchs.add(elementoMatch);
 
-        elementoMatch = new ElementoMatch("Goku","Ana Valencia",R.drawable.perro06,"Coquimbo","anita.linda@usach.cl","+56989094567",date);
+        elementoMatch = new ElementoMatch("Goku","Ana Valencia",R.drawable.perro06,"Coquimbo","anita.linda@usach.cl","56989094567",date);
         listaMatchs.add(elementoMatch);
     }
 
@@ -68,10 +68,15 @@ public class MatchsFragment extends Fragment {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-                ElementoMatch seleccioando;
-                seleccioando = (ElementoMatch) list.getItemAtPosition(position);
-                Toast.makeText(getContext(), "Has pulsado a " + seleccioando.getNombreMascota() + " Su dueño es " + seleccioando.getNombreDueño(), Toast.LENGTH_SHORT).show();
+                ElementoMatch seleccionado;
+                seleccionado = (ElementoMatch) list.getItemAtPosition(position);
                 Intent intent = new Intent(getActivity(), ContactoDatosActivity.class);
+                intent.putExtra("nombreMascota",seleccionado.getNombreMascota());
+                intent.putExtra("imagenMascota",seleccionado.getImagenMascota());
+                intent.putExtra("emailMascota",seleccionado.getEmail());
+                intent.putExtra("dueñoMascota",seleccionado.getNombreDueño());
+                intent.putExtra("telefonoMascota",seleccionado.getTelefono());
+                intent.putExtra("ubicacionMascota",seleccionado.getUbicacion());
                 startActivity(intent);
 
             }

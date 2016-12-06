@@ -1,16 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_contacto_datos"
+    android:id="@+id/relativePerfil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.usach.uxyappsmoviles.petloveprueba.ContactoDatosActivity">
+    tools:context="layout.PerfilFragment">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_perfil"
+        app:layout_heightPercent="40%"
+        app:layout_widthPercent="100%"
+        >
+
+
+        <ImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imagenPerfilContacto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/perro03"
+            android:scaleType="center"/>
+
+
+        <TextView
+            android:id="@+id/nombrePerfilMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bobby"
+            android:textSize="35dp"
+            android:textStyle="normal"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignBottom="@id/imagenPerfilContacto"
+            android:layout_alignLeft="@id/imagenPerfilContacto"
+            android:layout_centerHorizontal="true"
+            android:shadowColor="#000000"
+            android:shadowRadius="2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/datosContactoRelative"
+        android:layout_below="@id/relative_layout_perfil"
+        app:layout_heightPercent="60%"
+        app:layout_widthPercent="100%"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/dueñoContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.1"
+
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_perfil"
+                android:tint="@color/suave"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/dueño"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Juan Pérez"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dueñoUbicacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dueño"
+                        android:text="Santiago, Chile"
+                        android:textSize="15dp"
+                        android:textColor="@color/suave">
+                    </TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
 
 
 
-</FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/dueñoContacto"
+            android:id="@+id/telefonosContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.1"
+
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_telefono"
+                android:tint="@color/suave"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/telefono1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="56995018971"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tipoTelefono1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/telefono1"
+                        android:text="Móvil"
+                        android:textSize="15dp"
+                        android:textColor="@color/suave">
+                    </TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/telefonosContacto"
+            android:id="@+id/emailContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.1"
+
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_email"
+                android:tint="@color/suave"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/email1Contacto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="francisco.avello@usach.cl"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tipoEmail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/telefono1"
+                        android:text="Personal"
+                        android:textSize="15dp"
+                        android:textColor="@color/suave">
+                    </TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>
