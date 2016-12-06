@@ -23,16 +23,6 @@ import com.usach.uxyappsmoviles.petloveprueba.modelos.Tarjeta;
 
 import java.util.ArrayList;
 
-import in.arjsna.swipecardlib.SwipeCardView;
-
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
-
- * Use the {@link BuscarFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class BuscarFragment extends Fragment {
 
     TarjetaAdapter arrayAdapter;
@@ -67,7 +57,6 @@ public class BuscarFragment extends Fragment {
     }
 
     public BuscarFragment() {
-        // Required empty public constructor
     }
 
 
@@ -89,6 +78,7 @@ public class BuscarFragment extends Fragment {
 
         final View view = inflater.inflate(R.layout.fragment_buscar, container, false);
 
+        // Lógica para tarjetas de mascotas
         listaTarjetas = new ArrayList<Tarjeta>();
         llenarTarjetas();
         arrayAdapter = new TarjetaAdapter(getActivity(), listaTarjetas);
@@ -99,26 +89,21 @@ public class BuscarFragment extends Fragment {
 
             @Override
             public void removeFirstObjectInAdapter() {
-                // this is the simplest way to delete an object from the Adapter (/AdapterView)
                 listaTarjetas.remove(0);
                 arrayAdapter.notifyDataSetChanged();
             }
             @Override
             public void onLeftCardExit(Object dataObject) {
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
-                //Toast.makeText(getActivity(), "Siguiente", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                //Toast.makeText(getActivity(), "Like", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
-                Tarjeta tarjeta = new Tarjeta("ENSERUI","Probando",R.drawable.perro05);
+                Tarjeta tarjeta = new Tarjeta(listaTarjetas.get(listaTarjetas.size()-3).getNombreMascota()
+                        ,listaTarjetas.get(listaTarjetas.size()-2).getDescripcionMascota(),listaTarjetas.get(listaTarjetas.size()-4).getImagenMascota());
                 listaTarjetas.add(tarjeta);
                 arrayAdapter.notifyDataSetChanged();
             }
@@ -129,6 +114,7 @@ public class BuscarFragment extends Fragment {
             }
         });
 
+        // Acciones para botones de Like y Dislke
         likeButon = (ImageButton) view.findViewById(R.id.likeMascotaBoton);
 
         likeButon.setOnTouchListener(new ImageButton.OnTouchListener() {
@@ -165,7 +151,7 @@ public class BuscarFragment extends Fragment {
 
 
 
-        // Optionally add an OnItemClickListener
+        // Mostrar información de las mascotas al presionar cada tarjeta
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {

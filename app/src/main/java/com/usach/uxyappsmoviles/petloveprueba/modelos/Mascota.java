@@ -1,12 +1,7 @@
 package com.usach.uxyappsmoviles.petloveprueba.modelos;
 
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
-/**
- * Created by Francisco Avello on 05-12-2016.
- */
 
 public class Mascota {
 

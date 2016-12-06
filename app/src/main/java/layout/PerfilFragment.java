@@ -3,23 +3,22 @@ package layout;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.usach.uxyappsmoviles.petloveprueba.AgregarMascotaActivity;
 import com.usach.uxyappsmoviles.petloveprueba.EditarMascotaActivity;
@@ -27,11 +26,6 @@ import com.usach.uxyappsmoviles.petloveprueba.MyApplication;
 import com.usach.uxyappsmoviles.petloveprueba.R;
 import com.usach.uxyappsmoviles.petloveprueba.adapters.GridViewMascotasAdapter;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Mascota;
-import com.usach.uxyappsmoviles.petloveprueba.modelos.Usuario;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -41,9 +35,7 @@ public class PerfilFragment extends Fragment{
     GridViewMascotasAdapter arrayAdapter;
     private final static int RESULTADO_INFORMACION = 0;
     private final static int RESULTADO_EDITAR = 0;
-
-    boolean isImageFitToScreen;
-    de.hdodenhof.circleimageview.CircleImageView imagenPerfil;
+    private static int RESULTADO_CARGAR_IMAGEN = 1;
 
     public PerfilFragment() {
     }
@@ -82,8 +74,6 @@ public class PerfilFragment extends Fragment{
         String ubicacion = ((MyApplication) getActivity().getApplication()).getUserSesion().getCiudadUsuario() + ", " + ((MyApplication) getActivity().getApplication()).getUserSesion().getPaisUsuario();
         ubicacionPerfil.setText(ubicacion);
 
-
-
         FloatingActionButton agregarMascotaBoton = (FloatingActionButton ) view.findViewById(R.id.agregarMascotaBoton);
         agregarMascotaBoton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +94,19 @@ public class PerfilFragment extends Fragment{
                 i.putExtra("descripcionEditarMascota", ((MyApplication) getActivity().getApplication()).getUserSesion().getMascotasUsuario().get(position).getDescripcionMascota());
                 i.putExtra("posicion",position);
                 startActivityForResult(i,RESULTADO_EDITAR);
+            }
+        });
+
+
+        FloatingActionButton cambiarFoto = (FloatingActionButton) view.findViewById(R.id.cambiarFoto);
+        cambiarFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                startActivityForResult(i, 1);
             }
         });
         return view;
@@ -154,5 +157,26 @@ public class PerfilFragment extends Fragment{
                     break;
             }
         }
+
+        if (requestCode == RESULTADO_CARGAR_IMAGEN
+                && resultCode == Activity.RESULT_OK) {
+            String path = obtenerPath(data, this.getActivity());
+            if (path != null) {
+                ImageView mperfilImagen = (ImageView) getActivity().findViewById(R.id.profile_image);
+                mperfilImagen.setImageBitmap(BitmapFactory.decodeFile(path));
+            }
+        }
+    }
+
+    public static String obtenerPath(Intent data, Context context) {
+        Uri imagenseleccionada = data.getData();
+        String[] filePathColumn = { MediaStore.Images.Media.DATA };
+        Cursor cursor = context.getContentResolver().query(imagenseleccionada,
+                filePathColumn, null, null, null);
+        cursor.moveToFirst();
+        int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+        String pathImagen = cursor.getString(columnIndex);
+        cursor.close();
+        return pathImagen;
     }
 }

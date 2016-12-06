@@ -5,16 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.CirclePageIndicator;
 import com.synnapps.carouselview.ImageListener;
-import com.usach.uxyappsmoviles.petloveprueba.adapters.TarjetaAdapter;
 
 public class InformacionMascotaActivity extends AppCompatActivity {
 

@@ -1,7 +1,6 @@
 package com.usach.uxyappsmoviles.petloveprueba;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -105,10 +104,6 @@ public class AgregarMascotaActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
-
 
     @Override
     public boolean onSupportNavigateUp(){

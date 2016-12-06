@@ -2,10 +2,6 @@ package com.usach.uxyappsmoviles.petloveprueba.modelos;
 
 import java.util.ArrayList;
 
-/**
- * Created by Francisco Avello on 05-12-2016.
- */
-
 public class Usuario {
     private String nombreUsuario;
     private String apellidoPaternoUsuario;

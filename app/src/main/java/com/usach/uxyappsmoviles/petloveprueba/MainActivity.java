@@ -1,7 +1,6 @@
 package com.usach.uxyappsmoviles.petloveprueba;
 
 import android.os.Handler;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         this.atrasPresionadoDosVeces = true;
-        Toast.makeText(this, "Pulsa de nuevo para salir de PetLove", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Pulsa nuevamente ATRÁS para salir de PetLove", Toast.LENGTH_SHORT).show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -80,8 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position){
                 case 0:
                     Bundle args = new Bundle();

@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_3db7267a9edf8dccd64fc2d67fa6d31620d6ac40\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -30,24 +21,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_84ddde07768262d23be276b1647fbfc52b13b6fc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_0af86a607b370d262b74ea19846ed9800cbc141c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -63,42 +36,6 @@
         revision="24.0.3"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_0fd975295d93004cdb5febfd3ddde958ba751208\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.github.siyamed\android-shape-imageview\0.9.3\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ee07783aa59eefdeacc107abf472f45f60272302">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.siyamed-android-shape-imageview-0.9.3_289a466776e2d098f3b46ec0528546555934a60c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_523a52f65968df521d0bef223a75e1a949537b7f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_4bb23dbe0d361bb06bfc083cc670495c2639c0cc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_0bd6071f088c39882778c2264cd96e213b5ffc44\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,11 +75,137 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_b9b5fd90b1739eb748455801b3d162f3ce1ffc68\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_90d25fff870e789bab186c2e0612bcca567c916f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.github.markushi\circlebutton\1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ebe3b1f14fa79ba3cd1588acda4e6517ee9fe611">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.markushi-circlebutton-1.1_1211ce2a44716caa23dc9e89b9ee7c5f572b0410\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_42e37a291eb318553c3df496b106189c1f001a62\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_de9960b999fbe9c3ebce4e78153a3d2c3451d532\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_19f2d96fef0b0764e0ba859f51763880ae908309\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="41534d69891724fc68574345ba49984f4c0dc0fc">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9eddf0b2ec66408f1465d8347bf330a2d3ce15ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_3db7267a9edf8dccd64fc2d67fa6d31620d6ac40\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_84ddde07768262d23be276b1647fbfc52b13b6fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_0af86a607b370d262b74ea19846ed9800cbc141c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.github.siyamed\android-shape-imageview\0.9.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ee07783aa59eefdeacc107abf472f45f60272302">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.siyamed-android-shape-imageview-0.9.3_289a466776e2d098f3b46ec0528546555934a60c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_523a52f65968df521d0bef223a75e1a949537b7f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_4bb23dbe0d361bb06bfc083cc670495c2639c0cc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_0bd6071f088c39882778c2264cd96e213b5ffc44\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="cf4bb1f209b21e981cb340791eea842fe4b4f6d2">
+        sha1="0d4e5462aa2d4054e5148011f4782088cadc4d36">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_02a42da216504a23f4416115e24bff1406fda1ec\classes.dex" />
     </item>
     <item
@@ -165,24 +228,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_b9b5fd90b1739eb748455801b3d162f3ce1ffc68\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_90d25fff870e789bab186c2e0612bcca567c916f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -192,57 +237,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.github.markushi\circlebutton\1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ebe3b1f14fa79ba3cd1588acda4e6517ee9fe611">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.markushi-circlebutton-1.1_1211ce2a44716caa23dc9e89b9ee7c5f572b0410\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_42e37a291eb318553c3df496b106189c1f001a62\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Francisco Avello\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
         <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3.1_973e56684ea6b0784a972ce83547b7eb85fc3268\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_de9960b999fbe9c3ebce4e78153a3d2c3451d532\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6c5858ba115922e4c39ecfdef8d1788e31e988c3">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9eddf0b2ec66408f1465d8347bf330a2d3ce15ce\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\Francisco Avello\Desktop\PetLove\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_19f2d96fef0b0764e0ba859f51763880ae908309\classes.dex" />
     </item>
 
 </items>

@@ -4,9 +4,7 @@ import android.app.Application;
 
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Usuario;
 
-/**
- * Created by Francisco Avello on 05-12-2016.
- */
+//Clase para tener los datos del usuario que inició sesión durante toda la ejecución
 
 public class MyApplication extends Application {
 

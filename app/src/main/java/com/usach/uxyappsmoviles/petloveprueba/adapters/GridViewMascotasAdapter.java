@@ -4,38 +4,22 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
+import android.os.Vibrator;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.usach.uxyappsmoviles.petloveprueba.EditarMascotaActivity;
 import com.usach.uxyappsmoviles.petloveprueba.R;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Mascota;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-
-import de.hdodenhof.circleimageview.CircleImageView;
-
-/**
- * Created by Francisco Avello on 05-12-2016.
- */
 
 public class GridViewMascotasAdapter extends BaseAdapter {
 
@@ -46,7 +30,6 @@ public class GridViewMascotasAdapter extends BaseAdapter {
 
     public GridViewMascotasAdapter(Context context, ArrayList<Mascota> datos)
     {
-        //super(context, 0);
         this.ctx=context;
         this.datos= datos;
 
@@ -69,8 +52,6 @@ public class GridViewMascotasAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, final ViewGroup parent) {
-        // Get the data item for this position
-        //Cargo un Custom Edittext en cada celda
         LayoutInflater inflater = ((Activity) ctx).getLayoutInflater();
         convertView = inflater.inflate(R.layout.grid_mascotas, parent, false);
 
@@ -89,6 +70,8 @@ public class GridViewMascotasAdapter extends BaseAdapter {
         eliminarBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Vibrator vibrar = (Vibrator) ctx.getSystemService(Context.VIBRATOR_SERVICE);
+                vibrar.vibrate(100);
                 AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(ctx, R.style.AppTheme_Dark_Dialog));
                 builder.setMessage("¿Estás seguro que quieres eliminar a esta mascota?")
                         .setCancelable(false)

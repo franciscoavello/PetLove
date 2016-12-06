@@ -1,16 +1,15 @@
 package com.usach.uxyappsmoviles.petloveprueba;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Mascota;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Usuario;
 
@@ -19,11 +18,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
     private Usuario user;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,20 +36,12 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 login();
             }
-            /*
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
-            }*/
         });
     }
 
 
     public void onLoginSuccess(final int id) {
         android.support.v7.widget.AppCompatButton logear = (android.support.v7.widget.AppCompatButton) findViewById(R.id.btn_login);
-        logear.setEnabled(true);
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.putExtra("idUser",id);
 
@@ -166,8 +157,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 });
-
         startActivity(intent);
+        progressDialog.dismiss();
         finish();
     }
 
@@ -175,6 +166,7 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), "¡Error! Correo y/o contraseña incorrectos", Toast.LENGTH_LONG).show();
         android.support.v7.widget.AppCompatButton logear = (android.support.v7.widget.AppCompatButton) findViewById(R.id.btn_login);
         logear.setEnabled(true);
+        progressDialog.dismiss();
     }
 
     public void login() {
@@ -187,9 +179,10 @@ public class LoginActivity extends AppCompatActivity {
         android.support.v7.widget.AppCompatButton logear = (android.support.v7.widget.AppCompatButton) findViewById(R.id.btn_login);
         logear.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
+        progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
+        progressDialog.setCancelable(false);
         progressDialog.setMessage("Iniciando sesión...");
         progressDialog.show();
 
@@ -214,12 +207,12 @@ public class LoginActivity extends AppCompatActivity {
                                 String contra = jsonObject.getString("contrasena");
                                 if((emailUsuarioIngresado.contentEquals(email)) && passwordUsuarioIngresado.contentEquals(contra)){
                                     onLoginSuccess(id);
-                                    progressDialog.dismiss();
                                     break;
                                 }
                                 else if (i==jsonArray.length()-1){
                                     onLoginFailed();
-                                    progressDialog.dismiss();
+                                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                                    v.vibrate(200);
                                 }
                             }
                         } catch (JSONException e) {
@@ -239,6 +232,8 @@ public class LoginActivity extends AppCompatActivity {
         String passwordUsuarioIngresado = passUsuarioET.getText().toString();
 
         if (emailUsuarioIngresado.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(emailUsuarioIngresado).matches()) {
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(200);
             emailUsuarioET.setError("Ingresa un nombre de usuario válido");
             valid = false;
         } else {
@@ -246,6 +241,8 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (passwordUsuarioIngresado.isEmpty() || passwordUsuarioIngresado.length() < 4 || passwordUsuarioIngresado.length() > 12) {
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(200);
             passUsuarioET.setError("Tiene que ser de entre 4 a 12 caracteres");
             valid = false;
         } else {

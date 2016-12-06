@@ -1,8 +1,5 @@
 package com.usach.uxyappsmoviles.petloveprueba.modelos;
 
-/**
- * Created by Francisco Avello on 01-12-2016.
- */
 
 public class Tarjeta {
 

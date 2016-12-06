@@ -2,9 +2,6 @@ package com.usach.uxyappsmoviles.petloveprueba.modelos;
 
 import java.util.Date;
 
-/**
- * Created by Francisco Avello on 02-12-2016.
- */
 
 public class ElementoMatch {
 

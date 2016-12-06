@@ -26,6 +26,17 @@
                 app:civ_border_color="#FFFFFF"
                 android:layout_centerHorizontal="true"/>
 
+            <android.support.design.widget.FloatingActionButton
+                android:layout_alignRight="@id/profile_image"
+                android:layout_alignBottom="@id/profile_image"
+                android:id="@+id/cambiarFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_editar"
+                app:fabSize="mini"
+                app:backgroundTint="@color/colorPrimary"
+                android:elevation="3dp"/>
+
             <TextView
                 android:id="@+id/nombrePerfil"
                 android:layout_width="wrap_content"
