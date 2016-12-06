@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mascota"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:src="@drawable/gato"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FFFFFF"/>
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/eliminarMascotaPerfilBoton"
+        android:background="@drawable/estados_boton"
+        android:src="@drawable/ic_eliminar"
+        android:tint="@color/rojo"
+        android:textColor="@color/blanco"
+        android:elevation="3dp"
+        android:layout_alignRight="@id/mascota"
+        android:scaleType="fitXY"
+        />
+
+</RelativeLayout>

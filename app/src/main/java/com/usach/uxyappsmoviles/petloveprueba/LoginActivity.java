@@ -2,6 +2,7 @@ package com.usach.uxyappsmoviles.petloveprueba;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -82,23 +83,35 @@ public class LoginActivity extends AppCompatActivity {
                                     "        'raza': 'Beagle', \n" +
                                     "        'edad': '4', \n" +
                                     "        'fotos': {\n" +
-                                    "          'foto1': 'perro01.jpg',          \n" +
-                                    "          'foto2': 'perro02.jpg'\n" +
+                                    "          'foto1': 'perro01',          \n" +
+                                    "          'foto2': 'perro02'\n" +
                                     "        }\n" +
                                     "        ,\n" +
                                     "        'descripcion': 'Perro bastante jugueton y mañoso para comer. Le gusta dormir sobre los sillones.'\n" +
                                     "      },\n" +
                                     "      {\n" +
-                                    "        'nombre': 'Boby',\n" +
+                            "        'nombre': 'Boby',\n" +
                                     "        'tipo': 'Perro',\n" +
                                     "        'raza': 'Pastor Aleman',\n" +
                                     "        'edad': '2',\n" +
                                     "        'fotos': {\n" +
-                                    "          'foto1': 'perro03.jpeg',\n" +
-                                    "          'foto2': 'perro04.jpeg'\n" +
+                                    "          'foto1': 'perro03',\n" +
+                                    "          'foto2': 'perro04'\n" +
+                                    "        },\n" +
+                                    "        'descripcion': 'Perro bastante docil y amante de los juguetes. Come sus comidas al dia y no es tan inquieto como parece.'\n" +
+                                    "      },\n" +
+                                    "      {\n" +
+                                    "        'nombre': 'Alby',\n"   +
+                                    "        'tipo': 'Perro',\n" +
+                                    "        'raza': 'Cooker',\n" +
+                                    "        'edad': '4',\n" +
+                                    "        'fotos': {\n" +
+                                    "          'foto1': 'perro06',\n" +
+                                    "          'foto2': 'perro05'\n" +
                                     "        },\n" +
                                     "        'descripcion': 'Perro bastante docil y amante de los juguetes. Come sus comidas al dia y no es tan inquieto como parece.'\n" +
                                     "      }\n" +
+
                                     "    ]\n" +
                                     "  }\n" +
                                     "  ]";

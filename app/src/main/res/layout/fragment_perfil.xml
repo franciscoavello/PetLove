@@ -1,19 +1,18 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativePerfil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="layout.PerfilFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp">
-
         <RelativeLayout
             android:id="@+id/relative_layout_perfil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            app:layout_heightPercent="40%"
+            app:layout_widthPercent="82%"
+            app:layout_marginLeftPercent="9%"
+            app:layout_marginRightPercent="9%"
+            app:layout_marginTopPercent="7%"
             >
 
 
@@ -49,75 +48,51 @@
                 android:layout_below="@id/nombrePerfil"
                 android:layout_centerHorizontal="true"/>
 
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gridView"
+            android:layout_below="@id/relative_layout_perfil"
+            app:layout_heightPercent="53%"
+            app:layout_widthPercent="82%"
+            app:layout_marginLeftPercent="9%"
+            app:layout_marginRightPercent="9%"
+            android:layout_gravity="center">
+
             <TextView
                 android:id="@+id/tituloMascotas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="Mis Mascotas"
                 android:textSize="18dp"
-                android:textColor="@color/primaryText"
-                android:layout_below="@id/ubicacionPerfil"/>
+                android:textColor="@color/primaryText"/>
+
+
+            <GridView
+                android:layout_below="@id/tituloMascotas"
+                android:id="@+id/grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnWidth="90dp"
+                android:horizontalSpacing="1dp"
+                android:numColumns="auto_fit"
+                android:padding="1dp"
+                android:verticalSpacing="1dp" />
+
 
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
+    <android.support.design.widget.FloatingActionButton
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/agregarMascotaBoton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_agregar"
+        app:fabSize="normal"
+        app:backgroundTint="@color/suave"
+        android:elevation="3dp"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/mascota1"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:clickable="true"
-                android:src="@drawable/gato"
-                app:civ_border_width="1dp"
-                app:civ_border_color="#FFFFFF"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/mascota2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:clickable="true"
-                android:src="@drawable/perro01"
-                app:civ_border_width="1dp"
-                app:civ_border_color="#FFFFFF"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/mascota3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:clickable="true"
-                android:src="@drawable/perro02"
-                app:civ_border_width="1dp"
-                app:civ_border_color="#FFFFFF"/>
-
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/estados_boton"
-                android:id="@+id/agregarMascotaBoton"
-                android:src="@drawable/ic_agregar"
-                android:tint="@color/dividerColor"
-                android:textSize="30dp"
-                android:textColor="@color/blanco"
-                android:elevation="3dp"
-                />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-</FrameLayout>
+</android.support.percent.PercentRelativeLayout>

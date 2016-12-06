@@ -1,20 +1,28 @@
 package layout;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.usach.uxyappsmoviles.petloveprueba.AgregarMascotaActivity;
 import com.usach.uxyappsmoviles.petloveprueba.MyApplication;
 import com.usach.uxyappsmoviles.petloveprueba.R;
+import com.usach.uxyappsmoviles.petloveprueba.adapters.GridViewMascotasAdapter;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Mascota;
 import com.usach.uxyappsmoviles.petloveprueba.modelos.Usuario;
 
@@ -26,6 +34,11 @@ import java.util.ArrayList;
 
 
 public class PerfilFragment extends Fragment{
+    ArrayList<Mascota> mascotas;
+    GridViewMascotasAdapter arrayAdapter;
+    private final static int RESULTADO_INFORMACION = 0;
+    boolean isImageFitToScreen;
+    de.hdodenhof.circleimageview.CircleImageView imagenPerfil;
 
     public PerfilFragment() {
     }
@@ -48,6 +61,14 @@ public class PerfilFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.fragment_perfil,null,false);
 
+        mascotas = new ArrayList<Mascota>();
+        mascotas = ((MyApplication) getActivity().getApplication()).getUserSesion().getMascotasUsuario();
+
+        arrayAdapter = new GridViewMascotasAdapter(getActivity(),mascotas);
+
+        GridView flingContainer = (GridView) view.findViewById(R.id.grid);
+        flingContainer.setAdapter(arrayAdapter);
+
         TextView nombrePerfil = (TextView) view.findViewById(R.id.nombrePerfil);
         String nombre = ((MyApplication) getActivity().getApplication()).getUserSesion().getNombreUsuario() + " " + ((MyApplication) getActivity().getApplication()).getUserSesion().getApellidoPaternoUsuario();
         nombrePerfil.setText(nombre);
@@ -58,12 +79,12 @@ public class PerfilFragment extends Fragment{
 
 
 
-        ImageButton agregarMascotaBoton = (ImageButton) view.findViewById(R.id.agregarMascotaBoton);
+        FloatingActionButton agregarMascotaBoton = (FloatingActionButton ) view.findViewById(R.id.agregarMascotaBoton);
         agregarMascotaBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), AgregarMascotaActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, RESULTADO_INFORMACION);
             }
         });
 
@@ -81,6 +102,25 @@ public class PerfilFragment extends Fragment{
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == RESULTADO_INFORMACION){
+            switch (resultCode) {
+                case 1:
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            arrayAdapter.notifyDataSetChanged();
+                        }
+                    }, 350);
+                    break;
+                case Activity.RESULT_CANCELED:
+                    break;
+            }
+        }
     }
 
 
